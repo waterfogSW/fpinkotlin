@@ -14,7 +14,7 @@ fun <A> append(a1: List<A>, a2: List<A>): List<A> =
 // end::init[]
 
 fun <A> appendL(a1: List<A>, a2: List<A>): List<A> =
-    foldLeft(reverse(a1), a2, { y, x -> Cons(x, y) })
+    foldLeft(reverse(a1), a2) { y, x -> Cons(x, y) }
 
 class Solution13 : WordSpec({
     "list append" should {

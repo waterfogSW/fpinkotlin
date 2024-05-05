@@ -8,7 +8,7 @@ import io.kotlintest.specs.WordSpec
 
 // tag::init[]
 fun <A> reverse(xs: List<A>): List<A> =
-    foldLeft(xs, List.empty(), { t: List<A>, h: A -> Cons(h, t) })
+    foldLeft(xs, List.empty()) { t: List<A>, h: A -> Cons(h, t) }
 // end::init[]
 
 class Solution11 : WordSpec({
