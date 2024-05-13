@@ -17,7 +17,6 @@ fun <A, B> flatMap(
 
 // end::init[]
 
-//TODO: Enable tests by removing `!` prefix
 class Exercise19 : WordSpec({
     "list flatmap" should {
         "map and flatten a list" {

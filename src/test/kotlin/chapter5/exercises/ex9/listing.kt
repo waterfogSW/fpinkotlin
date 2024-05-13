@@ -8,17 +8,15 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.WordSpec
 import utils.SOLUTION_HERE
 
-//TODO: Enable tests by removing `!` prefix
 class Exercise9 : WordSpec({
 
     //tag::init[]
     fun from(n: Int): Stream<Int> =
-
-        SOLUTION_HERE()
+        Stream.cons({ n }) { from(n + 1) }
     //end::init[]
 
     "from" should {
-        "!return a Stream of ever incrementing numbers" {
+        "return a Stream of ever incrementing numbers" {
             from(5).take(5).toList() shouldBe
                 List.of(5, 6, 7, 8, 9)
         }
